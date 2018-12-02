@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+    <title>jQuery Ensure Max Length</title>
+	
+		<base href="/jquery-ensure-max-length/">
+
+	<!-- Latest compiled and minified CSS -->
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+
+	<!-- Optional theme -->
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
+
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+	
+	
+	<style type="text/css">
+		body { padding-top: 50px; position: relative; height: 100%; overflow-y: scroll  }
+		.jumbotron { background: #644A8C; color: #fff; }
+		.navbar { margin-bottom: 0; }
+		.sch { margin-bottom: 20px; }
+		.my-icon-css-class { display: inline-block;	background: red; }
+		footer {background: #ccc; padding: 20px 0; margin-top: 20px;}
+		.d-block { display: block; }
+	</style>
+  </head>
+  <body id="home">
+	<nav class="navbar navbar-default navbar-fixed-top" id="main-navbar">
+      <div class="container">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="navbar-brand" href="#home">jQuery Ensure Max Length</a>
+        </div>
+        <div id="navbar" class="collapse navbar-collapse navbar-right">
+          <ul class="nav navbar-nav">
+						<li><a href="#defaults" class="active">Default Options</a></li>
+            <li><a href="#basic-usage">Basic Usage</a></li>
+						<li class="dropdown">
+							<a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
+									Options <span class="caret"></span></a>
+
+								<ul class="dropdown-menu">
+									<li><a href="#maxLength">Change max length</a></li>
+									<li><a href="#cssClass">Css classes</a></li>
+									<li><a href="#separator">Separator</a></li>
+									<li><a href="#placement">Placement</a></li>
+								</ul>
+						</li>
+          </ul>
+        </div><!--/.nav-collapse -->
+      </div>
+    </nav>
+	
+	<header class="jumbotron">
+      <div class="container">
+        <h1>jQuery Ensure Max Length</h1>
+        <p>A simple, easy to use and customizable jquery plugin to limit chatacters inside inputs or textareas fields</p>
+		<a href="https://github.com/vsilva472/jquery-ensure-max-length" target="_blank" class="btn btn-default">Download</a>
+      </div>
+    </header>
+
+
+	<section class="container" id="defaults">
+		<div class="row">
+			<div class="col-sm-12 sch">
+				<h2>Default Options</h2>
+			</div>
+			<div class="col-sm-12">
+				<pre>
+{ 
+	limit: 100,	// max chars allowed
+	cssClass: '', // css classes to apply on counter
+	separator: '/', // separator of actual and max chars
+	placement: null // jQuery selector of where to append counter Ex: '.counter'
+}
+				</pre>
+			</div>
+		</div>
+	</section>
+
+	<section class="example1 container" id="basic-usage">
+		<div class="row">
+			<div class="col-sm-12 sch">
+				<h2>Basic Usage:</h2>
+				<p>The basic usage of jQuery Ensure Max Length is discribed bellow.</p>
+			</div>
+			<div class="col-sm-6">
+				<div class="form-group">
+					<input type="text" class="form-control" id="sample1" placeholder="Title of page">
+				</div>
+			</div>
+
+			<div class="col-sm-6">
+	<pre>
+&lt;script src=&quot;path_to_jquery/jquery.min.js&quot;&gt;&lt;/script&gt;
+&lt;script src=&quot;path_to_plugin/jquery-ensure-max-length.js&quot;&gt;&lt;/script&gt;
+&lt;script type=&quot;text/javascript&quot;&gt;
+(function ( $ ) {
+	$( '#example1-title' ).EnsureMaxLength();
+} ( jQuery ));
+&lt;/script&gt;	
+</pre>
+			</div>
+		</div>
+	</section>	
+	
+	<section class="container" id="maxLength">
+		<div class="row">
+			<div class="col-sm-12 sch">
+				<h2>Changing default max chars</h2>
+				<p>This plungin even works with textareas! <br />The folowing sample illustrates how to change the default max chars from 100 to 250</p>
+			</div>
+		</div>
+		<div class="col-sm-6">
+			<div class="form-group">
+				<textarea class="form-control" id="sample2" rows="5"></textarea>
+			</div>
+		</div>
+		<div class="col-sm-6">
+<pre>
+&lt;script src=&quot;path_to_jquery/jquery.min.js&quot;&gt;&lt;/script&gt;
+&lt;script src=&quot;path_to_plugin/jquery-ensure-max-length.js&quot;&gt;&lt;/script&gt;
+&lt;script type=&quot;text/javascript&quot;&gt;
+(function ( $ ) {
+	$( '#sample2' ).EnsureMaxLength({
+		limit: 250
+	});
+} ( jQuery ));
+&lt;/script&gt;	
+</pre>
+				</div>
+	</section>
+
+	<section  class="container" id="cssClass">
+	<div class="row">
+			<div class="col-sm-12 sch">
+				<h2>Adding some css classes</h2>
+				<p>jQuery Ensure Max Legth allow you to add css class to customize counter.</p>
+				<p>The classes must be inserted as string separate by a space. <code>class1 class2 class3 ... class3</code></p>
+				<p>In this sample we are adding <code>d-block text-right help-block</code> to counter element.</p>
+			</div>
+		</div>
+		<div class="col-sm-6">
+			<div class="form-group">
+				<textarea class="form-control" id="sample3" rows="5"></textarea>
+			</div>
+		</div>
+		<div class="col-sm-6">
+<pre>
+&lt;script src=&quot;path_to_jquery/jquery.min.js&quot;&gt;&lt;/script&gt;
+&lt;script src=&quot;path_to_plugin/jquery-ensure-max-length.js&quot;&gt;&lt;/script&gt;
+&lt;script type=&quot;text/javascript&quot;&gt;
+(function ( $ ) {
+	$( '#sample3' ).EnsureMaxLength({
+		cssClass: 'class1 class2 class3'
+	});
+} ( jQuery ));
+&lt;/script&gt;	
+</pre>
+				</div>
+	</section>
+
+	<section  class="container" id="separator">
+			<div class="row">
+					<div class="col-sm-12 sch">
+						<h2>Changing separator</h2>
+						<p>You can also changing the separator <code>"/"</code> to wherever symbol or word you want. In this sample a are changing the "/" to " of ".</p>
+					</div>
+				</div>
+				<div class="col-sm-6">
+					<div class="form-group">
+						<textarea class="form-control" id="sample4" rows="5"></textarea>
+					</div>
+				</div>
+				<div class="col-sm-6">
+<pre>
+&lt;script src=&quot;path_to_jquery/jquery.min.js&quot;&gt;&lt;/script&gt;
+&lt;script src=&quot;path_to_plugin/jquery-ensure-max-length.js&quot;&gt;&lt;/script&gt;
+&lt;script type=&quot;text/javascript&quot;&gt;
+(function ( $ ) {
+	$( '#sample4' ).EnsureMaxLength({
+		separator: ' of '
+	});
+} ( jQuery ));
+&lt;/script&gt;	
+</pre>
+						</div>
+			</section>
+
+	<section  class="container" id="placement">
+		<div class="row">
+			<div class="col-sm-12 sch">
+				<h2>Specifying where to append the counter element</h2>
+				<p>The use of 'placement' is optional and if you want to use it, you must pass a valid jquery selector to explicit tell to plugin where to append the counter element</p>
+				<p>Note: If you don't specify a placement this plugin will append the counter element right after the field</p>
+			</div>
+		</div>
+		<div class="col-sm-6">
+			<div class="input-group">
+				<span class="input-group-addon" id="counter-container"></span>
+				<input type="text" class="form-control" id="sample5" placeholder="The title of Page">
+			</div>
+		</div>
+		<div class="col-sm-6">
+<pre>
+&lt;script src=&quot;path_to_jquery/jquery.min.js&quot;&gt;&lt;/script&gt;
+&lt;script src=&quot;path_to_plugin/jquery-ensure-max-length.js&quot;&gt;&lt;/script&gt;
+&lt;script type=&quot;text/javascript&quot;&gt;
+(function ( $ ) {
+	$( '#sample5' ).EnsureMaxLength({
+		placement: '#counter-container'
+	});
+} ( jQuery ));
+&lt;/script&gt;	
+</pre>
+		</div>
+	</section>
+	<footer>
+		<div class="container">
+			<div class="row">
+				<div class="col-xs-12 text-muted text-right">MIT - Version 1.0.0</div>
+			</div>
+		</div>
+	</footer>
+  
+    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <!-- Latest compiled and minified JavaScript -->
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+	<script src="dist/jquery-ensure-max-length.min.js"></script>
+	
+	<script>
+		( function ( $ ) {
+			$( '#sample1' ).EnsureMaxLength();
+			
+			$( '#sample2' ).EnsureMaxLength({	
+				limit: 250 
+			});
+
+			$( '#sample3' ).EnsureMaxLength({ 
+					cssClass: 'd-block text-right help-block'
+			});
+			
+			$( '#sample4' ).EnsureMaxLength({ 
+					separator: ' of '
+			});
+
+			$( '#sample5' ).EnsureMaxLength({ 
+					placement: '#counter-container'
+			});
+
+		   
+		  $("body").attr({"data-spy": "scroll", "data-target": "#main-navbar"})
+				.scrollspy({offset: 100});
+		   
+		   $( '.navbar a' ).on( 'click', function ( e ) {
+				e.preventDefault();
+				if ( $(this).attr('href') == '#' ) return;
+				$('html, body').animate({scrollTop: $($(this).attr('href')).offset().top - 50 }, 500);
+				
+				if ( $( window ).width() <= 767 && !$( this ).hasClass( 'navbar-brand' ) ) $( '.navbar-toggle' ).trigger( 'click' );
+			});
+		} ( jQuery ) );
+	</script>
+  </body>
+</html>
