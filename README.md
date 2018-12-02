@@ -77,7 +77,7 @@ You can also changing the separator / to wherever symbol or word you want. In th
  ```
  
  ### Specifying where to append the counter element
- The use of 'placement' is optional and if you want to use it, you must pass a valid jquery selector to explicit tell to plugin where to append the counter element. [See sample5](https://vsilva472.github.io/jquery-ensure-max-length#placement/)
+ The use of 'placement' is optional and if you want to use it, you must pass a valid jquery selector to explicit tell to plugin where to append the counter element. [See sample5](https://vsilva472.github.io/jquery-ensure-max-length/#placement)
  
  ```
     <script type="text/javascript">
