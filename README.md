@@ -9,7 +9,7 @@ See [DEMO](http://vsilva472.github.io/jquery-ensure-max-length) in action.
     <script type="text/javascript">
         (function ( $ ) {
             // this is the same of $( 'table' ).TableSorter();
-            $( '#my-field' ).EnsureMaxLength(
+            $( '#field-selector' ).EnsureMaxLength(
                 { 
                     limit: 100,
                     cssClass: '',
@@ -22,7 +22,7 @@ See [DEMO](http://vsilva472.github.io/jquery-ensure-max-length) in action.
  ```
 
 ## Basic usage
-* Add jquery ensure max length file to your page **after jquery core**:
+* Add jQuery Ensure Max Length file to your page **after jquery core**:
 ```
     <script src="path_to_jquery/jquery.min.js"></script>
     <script src="path_to_plugin/jquery-ensure-max-length.js"></script>
@@ -37,25 +37,25 @@ See [DEMO](http://vsilva472.github.io/jquery-ensure-max-length) in action.
  ```
  
 ### Changing default max chars
-This plungin even works with textareas! .The folowing sample illustrates how to change the default max chars from 100 to 250
+This plugin even works with textareas. The folowing sample illustrates how to change the default max chars from 100 to 250
  ```
     <script type="text/javascript">
         (function ( $ ) {
-            $( '#sample2' ).EnsureMaxLength({
+            $( '#field-selector' ).EnsureMaxLength({
 		       limit: 250
             });
         } ( jQuery ));
     </script>
  ```
  ### Adding css classes
-jQuery Ensure Max Legth allow you to add css class to customize counter. The classes must be inserted as string separate by a space.
+jQuery Ensure Max Length allow you to add css class to customize counter. The classes must be inserted as string separate by a space.
  ```
     /**
      * Add css classes
      */
     <script type="text/javascript">
         (function ( $ ) {
-            $( '#sample2' ).EnsureMaxLength({
+            $( '#field-selector' ).EnsureMaxLength({
                  cssClass: 'class1 class2 class3'
             });
         } ( jQuery ));
@@ -69,7 +69,7 @@ You can also changing the separator / to wherever symbol or word you want. In th
      */
     <script type="text/javascript">
         (function ( $ ) {
-            $( '#sample2' ).EnsureMaxLength({
+            $( '#field-selector' ).EnsureMaxLength({
                  separator: ' of '
             });
         } ( jQuery ));
@@ -82,7 +82,7 @@ You can also changing the separator / to wherever symbol or word you want. In th
  ```
     <script type="text/javascript">
         (function ( $ ) {
-            $( '#sample2' ).EnsureMaxLength({
+            $( '#field-selector' ).EnsureMaxLength({
                  placement: '#counter-container'
             });
         } ( jQuery ));
