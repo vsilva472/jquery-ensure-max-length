@@ -1,14 +1,14 @@
 # jQuery Ensure Max Length
-A simple, easy to use and customizable jquery plugin to limit chatacters inside input or textarea fields.
+A simple, easy to use and customizable jquery plugin to limit characteres inside input or textarea fields.
 See [DEMO](http://vsilva472.github.io/jquery-ensure-max-length) in action.
 
 
  ## Default options
- The default pluigin options are:
+ The default plugin options are:
   ```
     <script type="text/javascript">
         (function ( $ ) {
-            // this is the same of $( 'table' ).TableSorter();
+            // this is the same of $( 'table' ).EnsureMaxLength();
             $( '#field-selector' ).EnsureMaxLength(
                 { 
                     limit: 100,
@@ -27,7 +27,7 @@ See [DEMO](http://vsilva472.github.io/jquery-ensure-max-length) in action.
     <script src="path_to_jquery/jquery.min.js"></script>
     <script src="path_to_plugin/jquery-ensure-max-length.js"></script>
  ```
-2. After import jquery ensure max length just call the plugin api:
+2. After import jQuery Ensure Max Length just call the plugin api:
  ```
     <script type="text/javascript">
         (function ( $ ) {
@@ -48,7 +48,7 @@ This plugin even works with textareas. The folowing sample illustrates how to ch
     </script>
  ```
  ### Adding css classes
-jQuery Ensure Max Length allow you to add css class to customize counter. The classes must be inserted as string separate by a space.
+jQuery Ensure Max Length allow you to add css classes to customize counter element. The classes must be inserted as string separate by a space.
  ```
     /**
      * Add css classes
@@ -62,7 +62,7 @@ jQuery Ensure Max Length allow you to add css class to customize counter. The cl
     </script>
  ```
  ### Changing separator
-You can also changing the separator / to wherever symbol or word you want. In this sample a are changing the "/" to " of ".
+You can also change the separator `/` to wherever symbol or word you want. In this sample a are changing the `/` to ` of `.
  ```
     /**
      * Changing separator
@@ -77,7 +77,7 @@ You can also changing the separator / to wherever symbol or word you want. In th
  ```
  
  ### Specifying where to append the counter element
- The use of 'placement' is optional and if you want to use it, you must pass a valid jquery selector to explicit tell to plugin where to append the counter element. [See sample5](https://vsilva472.github.io/jquery-ensure-max-length/#placement)
+ The use of 'placement' is optional and if you want to use it, you must pass a valid jQuery selector to explicit tell to plugin where to append the counter element. [See sample5](https://vsilva472.github.io/jquery-ensure-max-length/#placement)
  
  ```
     <script type="text/javascript">
