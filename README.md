@@ -93,6 +93,10 @@ You can also change the separator `/` to wherever symbol or word you want. In th
 
 1.0.0 - 2018-12-02
 * Initial Commit
+
+### Donation
+Help me to improve this project sending me some **HTMLCOIN**  
+Wallet: **[HqgaiK6T1o2JP4p3p34CZp2g3XnSsSdCXp](htmlcoin:HqgaiK6T1o2JP4p3p34CZp2g3XnSsSdCXp?label=Doa%C3%A7%C3%B5es%20Github)**  
  
  #### License
  MIT
