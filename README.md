@@ -91,6 +91,9 @@ You can also change the separator `/` to wherever symbol or word you want. In th
  
  ### Changelog
 
+1.0.1 - 2019-04-12
+* Fix #4 Maxlength
+ 
 1.0.0 - 2018-12-02
 * Initial Commit
 

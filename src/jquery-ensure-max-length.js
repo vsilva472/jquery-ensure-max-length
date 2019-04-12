@@ -17,10 +17,14 @@
 		var _self = this;
 		
 		this.showCount();
-		
+		this.addMaxlengthAttribute();
 		this.element.on( 'keyup blur', function () {
 			_self.checkLength.call( _self, this );
 		});
+	};
+	
+	Plugin.prototype.addMaxlengthAttribute = function () {
+		this.element.attr('maxlength', this.options.limit);
 	};
 	
 	Plugin.prototype.showCount = function () {	
